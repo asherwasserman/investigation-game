@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -7,12 +8,53 @@ using System.Threading.Tasks;
 namespace investigation_game.models
 {
     public class IranianAgent
-    {
-        Sensor sensor1;
-        Sensor sensor2;
-        public IranianAgent(Sensor Sensor1, Sensor Sensor2)
+    {        
+        private static List<Sensor> sensors = new List<Sensor>();
+        private Sensor[] AttachedSensors;
+        public IranianAgent(List<Sensor> Sensors)
         {
-            sensor1 = ensor1
+            sensors = Sensors;
+            AttachedSensors = new Sensor[sensors.Count];
+        }
+        
+
+        public int CompatibilityChecker()
+        {
+            Sensor sensor;
+            int numAttachedSensors = 0;
+            for (int i = 0; i < sensors.Count; i++)
+            {
+                sensor = AttachedSensors[i];
+                if (sensor != null)
+                {
+                    if (sensor.Activate(sensors[i]))
+                    {
+                        numAttachedSensors++;
+                    }
+                }                
+            }
+            return numAttachedSensors;
+        }
+
+        public int getSumOfSensors()
+        {
+            return sensors.Count;
+        }
+
+        public void SnapSensor(int num, Sensor sensor)
+        {
+            AttachedSensors[num] = sensor; 
+        }
+    }
+
+    public class IranianAgentFactory
+    {
+        public static IranianAgent CreateAnAgent()
+        {
+            List<Sensor> sensors;
+            sensors = SensorFactory.CreateSumOfSensors(2);
+            IranianAgent iranianAgent = new IranianAgent(sensors);
+            return iranianAgent;
         }
     }
 }
