@@ -1,0 +1,15 @@
+C:\Users\user1\source\repos\investigation_game\investigation_game\bin\Debug\net8.0\investigation_game.exe
+C:\Users\user1\source\repos\investigation_game\investigation_game\bin\Debug\net8.0\investigation_game.deps.json
+C:\Users\user1\source\repos\investigation_game\investigation_game\bin\Debug\net8.0\investigation_game.runtimeconfig.json
+C:\Users\user1\source\repos\investigation_game\investigation_game\bin\Debug\net8.0\investigation_game.dll
+C:\Users\user1\source\repos\investigation_game\investigation_game\bin\Debug\net8.0\investigation_game.pdb
+C:\Users\user1\source\repos\investigation_game\investigation_game\obj\Debug\net8.0\investigation_game.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user1\source\repos\investigation_game\investigation_game\obj\Debug\net8.0\investigation_game.AssemblyInfoInputs.cache
+C:\Users\user1\source\repos\investigation_game\investigation_game\obj\Debug\net8.0\investigation_game.AssemblyInfo.cs
+C:\Users\user1\source\repos\investigation_game\investigation_game\obj\Debug\net8.0\investigation_game.csproj.CoreCompileInputs.cache
+C:\Users\user1\source\repos\investigation_game\investigation_game\obj\Debug\net8.0\investigation_game.sourcelink.json
+C:\Users\user1\source\repos\investigation_game\investigation_game\obj\Debug\net8.0\investigation_game.dll
+C:\Users\user1\source\repos\investigation_game\investigation_game\obj\Debug\net8.0\refint\investigation_game.dll
+C:\Users\user1\source\repos\investigation_game\investigation_game\obj\Debug\net8.0\investigation_game.pdb
+C:\Users\user1\source\repos\investigation_game\investigation_game\obj\Debug\net8.0\investigation_game.genruntimeconfig.cache
+C:\Users\user1\source\repos\investigation_game\investigation_game\obj\Debug\net8.0\ref\investigation_game.dll
