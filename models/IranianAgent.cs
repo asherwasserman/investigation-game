@@ -45,6 +45,11 @@ namespace investigation_game.models
         {
             AttachedSensors[num] = sensor; 
         }
+
+        public void RemoveSensor(int num)
+        {
+            AttachedSensors[num] = null;
+        }
     }
 
     public class IranianAgentFactory

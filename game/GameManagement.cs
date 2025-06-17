@@ -74,11 +74,6 @@ namespace investigation_game.game
                 "Gyroscope",
                 "GPS Sensor",
                 "Microphone",
-                "Thermal Camera",
-                "Infrared Sensor",
-                "Air Quality Sensor",
-                "Facial Recognition Sensor",
-                "RFID Scanner"
             };
             while (true)
             {
@@ -91,7 +86,7 @@ namespace investigation_game.game
                 }
                 else
                 {
-                    Console.WriteLine($"No named sensor exists{input}. ");
+                    Console.WriteLine($"No named sensor exists '{input}'. ");
                     Console.WriteLine("please Enter a valid name. ");
                 }
                 

@@ -15,7 +15,7 @@ namespace investigation_game.models
         {
             name = Name;
         }
-        public bool Activate(Sensor sensor)
+        public virtual bool Activate(Sensor sensor)
         {            
             if (this.name == sensor.name)
             {
@@ -40,11 +40,6 @@ namespace investigation_game.models
                 "Gyroscope",
                 "GPS Sensor",
                 "Microphone",
-                "Thermal Camera",
-                "Infrared Sensor",
-                "Air Quality Sensor",
-                "Facial Recognition Sensor",
-                "RFID Scanner"
             };
             Random rand = new Random();
             Sensor newSensor = new Sensor(sensors[rand.Next(sensors.Count)]);
