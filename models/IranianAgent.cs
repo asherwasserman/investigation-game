@@ -46,6 +46,11 @@ namespace investigation_game.models
             AttachedSensors[num] = sensor; 
         }
 
+        public virtual void Attack()
+        {
+
+        }
+
         public void RemoveSensor(int num)
         {
             AttachedSensors[num] = null;
