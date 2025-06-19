@@ -6,7 +6,8 @@ namespace investigation_game
     {
         static void Main()
         {
-            GameManagement.StartPlay();
+            GameManagement gm = new();
+            gm.StartPlay();
         }
     }
 }

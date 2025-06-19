@@ -9,8 +9,9 @@ namespace investigation_game.models
 {
     public class IranianAgent
     {        
-        private static List<Sensor> sensors = new List<Sensor>();
-        private Sensor[] AttachedSensors;
+        protected static List<Sensor> sensors = new List<Sensor>();
+        protected Sensor[] AttachedSensors;
+        protected List<int> PinnedPlaces = new List<int>();
         public IranianAgent(List<Sensor> Sensors)
         {
             sensors = Sensors;
@@ -18,10 +19,11 @@ namespace investigation_game.models
         }
         
 
-        public int CompatibilityChecker()
+        public virtual int CompatibilityChecker()
         {
             Sensor sensor;
             int numAttachedSensors = 0;
+            PinnedPlaces = new List<int>();
             for (int i = 0; i < sensors.Count; i++)
             {
                 sensor = AttachedSensors[i];
@@ -29,6 +31,7 @@ namespace investigation_game.models
                 {
                     if (sensor.Activate(sensors[i]))
                     {
+                        PinnedPlaces.Add(i);
                         numAttachedSensors++;
                     }
                 }                
@@ -50,21 +53,10 @@ namespace investigation_game.models
         {
 
         }
-
-        public void RemoveSensor(int num)
-        {
-            AttachedSensors[num] = null;
-        }
     }
 
     public class IranianAgentFactory
     {
-        public static IranianAgent CreateAnAgent()
-        {
-            List<Sensor> sensors;
-            sensors = SensorFactory.CreateSumOfSensors(2);
-            IranianAgent iranianAgent = new IranianAgent(sensors);
-            return iranianAgent;
-        }
+        
     }
 }

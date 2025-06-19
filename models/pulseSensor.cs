@@ -9,16 +9,18 @@ namespace investigation_game.models
 {
     public class pulseSensor: Sensor
     {
+        public override string name { get; protected set; } = "Pulse Sensor";
         int sessionCounter;
-        public pulseSensor(string name) : base(name)
+        public pulseSensor() : base()
         {
             sessionCounter = 0;
+
         }
 
         public override bool Activate(Sensor sensor)
         {
             sessionCounter++;
-            if (sessionCounter == 4)
+            if (sessionCounter > 3)
             {
                 return false;    
             }
